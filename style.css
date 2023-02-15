@@ -152,6 +152,10 @@ section {
     display: flex;
 }
 
+.about__title {
+    margin-bottom: 2rem;
+}
+
 .about__photo {
     margin-right: 3%;
 }
@@ -181,6 +185,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .experiences {
