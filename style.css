@@ -473,6 +473,10 @@ section {
         margin-top: 3%;
     }
 
+    .about__container-cv-detail p {
+        width: 80%;
+    }
+
     .experiences__blob {
         max-height: 50rem;
     }
