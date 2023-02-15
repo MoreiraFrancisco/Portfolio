@@ -1,0 +1,490 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    color: #292D32;
+    text-decoration: none;
+    list-style-type: none;
+    scrollbar-width: auto;
+    scrollbar-color: #efb675 #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffe7cc;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #efb675;
+    border-radius: 10px;
+    width: 6px;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.navHeader a li,
+.home p,
+.home h1 .highlight {
+    color: #fff;
+}
+
+.about p,
+.skills,
+.projects p,
+.experiences__jobs {
+    margin-bottom: 4%;
+}
+
+.scrolltransition {
+    opacity: 0;
+    display: flex;
+    margin: 1rem 0 2rem 15%;
+    width: 70%;
+}
+
+.scrolltransition.show {
+    opacity: 1;
+    transition: 1s;
+}
+
+.scrolltransition.hide {
+    opacity: 0;
+    transition: 1s;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills li {
+    padding: 0.25rem 0.7rem;
+    margin: 0 0.25rem 1rem 0;
+    background-color: #292D32;
+    color: white;
+}
+
+.active {
+    border-right: solid 4px #efb675;
+    border-bottom: solid 4px #efb675;
+    box-shadow: rgb(0 0 0 / 50%) 0px 8px 16px 0px;
+}
+
+.highlight {
+    text-decoration: underline;
+    text-decoration-color: #efb675;
+    text-decoration-thickness: 0.7rem;
+}
+
+.img-logos {
+    width: 60px;
+    height: 60px;
+}
+
+.navHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 10%;
+    background-color: #292D32;
+
+}
+
+.navHeader__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.navheader__links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    letter-spacing: 0.05rem;
+    height: 50px;
+}
+
+.navheader__links a li {
+    text-decoration: underline;
+    text-decoration-color: #efb675;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.4rem;
+    padding: 25px;
+}
+
+.navHeader__menuHamb {
+    height: 0;
+    overflow: hidden;
+}
+
+.home {
+    background-color: #292D32;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 10% 20px 10%;
+    height: 38.5rem;
+    overflow: hidden;
+}
+
+.home h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+.home__container-description {
+    display: flex;
+    width: 10rem;
+    justify-content: space-evenly;
+}
+
+.about {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+}
+
+.about__photo {
+    margin-right: 3%;
+}
+
+.imgFM {
+    max-width: 15em;
+    border-radius: 25px;
+}
+
+.about__container-cv-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    border-right: solid 4px #efb675;
+    border-bottom: solid 4px #efb675;
+    box-shadow: rgb(0 0 0 / 50%) 0px 8px 16px 0px;
+}
+
+.about__container-mailDown a,
+.about__container-mailDown span {
+    margin: 3rem;
+    text-align: center;
+}
+
+.about__container-mailDown {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.experiences {
+    display: flex;
+    width: 100%;
+}
+
+.experiences p {
+    padding: 0.2rem 0;
+}
+
+.experiences li {
+    padding: 1.3rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.experiences__job-card1,
+.experiences__job-card2,
+.experiences__job-card3 {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 0;
+}
+
+.experiences__job-card1.show,
+.experiences__job-card2.show,
+.experiences__job-card3.show {
+    height: auto;
+    overflow: auto;
+    opacity: 1;
+    transition: opacity 0.3s;
+    height: 100%;
+    width: 100%;
+}
+
+.experience__click {
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+}
+
+.experience__click.hide {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.experiences__blob {
+    max-height: 30rem;
+}
+
+.experiences__blob.hide {
+    height: 0;
+    overflow: hidden;
+}
+
+.experiences__jobs {
+    margin-right: 10%;
+}
+
+.experiences__job-place {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.experiences__job-year {
+    text-align: center;
+}
+
+.experiences__details {
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.project1,
+.project2,
+.project3 {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    border-right: solid 4px #efb675;
+    border-bottom: solid 4px #efb675;
+    box-shadow: rgb(0 0 0 / 50%) 0px 8px 16px 0px;
+}
+
+.project1 a,
+.project2 a,
+.project3 a {
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.project__header {
+    margin-left: 15%;
+    font-size: 1em;
+}
+
+.projects__container-details {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.projects__title {
+    position: absolute;
+}
+
+.thumb-project {
+    width: 26rem;
+}
+
+.footer__container {
+    background-color: #292D32;
+    height: 13rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__container a,
+.footer__container p,
+.footer__container li {
+    color: #fff;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__links a li {
+    padding: 20px;
+    text-decoration: underline;
+    text-decoration-color: #efb675;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.4rem;
+}
+
+.footer__social {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 769px) {
+
+    .home h1 {
+        font-size: 3.0rem;
+    }
+
+    .about h1 {
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__container-cv-detail {
+        border: none;
+        box-shadow: none;
+    }
+
+    .experiences__blob {
+        max-height: 90rem;
+    }
+
+    .experience__click {
+        font-size: 1.5rem;
+    }
+
+    .project1,
+    .project2,
+    .project3 {
+        flex-direction: column;
+        border: none;
+        box-shadow: none;
+    }
+
+    .projects__title {
+        position: static;
+        text-align: center;
+    }
+
+    .project__photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .thumb__photo {
+        width: 22rem;
+    }
+
+    .footer__links {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    .about p,
+    .skills,
+    .experiences__jobs {
+        margin-bottom: 8%;
+    }
+
+    .about,
+    .experiences,
+    .skills,
+    .projects {
+        flex-direction: column;
+    }
+
+    .skills li {
+        margin: 0 0.25rem 0.3rem 0;
+    }
+
+    .navHeader {
+        height: 420px;
+        justify-content: flex-start;
+    }
+
+    .navHeader__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navheader__links {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .navheader__links.expand {
+        height: 20rem;
+        overflow: hidden;
+        transition: height 0.6s;
+        align-items: center;
+    }
+
+    .navHeader__menuHamb {
+        height: 50px;
+        margin-top: 0.6rem;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .about__photo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 10%;
+    }
+
+    .about__container-cv-detail {
+        margin-top: 3%;
+    }
+
+    .experiences__blob {
+        max-height: 50rem;
+    }
+
+    .thumb-project {
+        width: 20rem;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .footer__links {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer__container {
+        height: auto;
+        flex-direction: column;
+        padding: 0.8rem 0;
+    }
+
+}

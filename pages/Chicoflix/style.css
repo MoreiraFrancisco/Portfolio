@@ -1,0 +1,243 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #000;
+}
+main {
+    background-image:url('https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg');
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+main:after{
+    background-color:rgba(0, 0, 0, 0.68);
+    content:'';
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+main.border {
+    border-bottom: 8px #202020 solid;
+}
+.header-movies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float:left;
+    position: relative;
+    margin-left: 5%;
+    padding: 15px;
+    width:90%;
+    z-index: 9;
+}
+.header-movies__right-container {
+    display: flex;
+    align-items: center;
+}
+.header-movies__title {
+    color:red;
+    font-family:'arial',sans-serif;
+    font-size:40px;
+    text-shadow:2px 2px #000000;
+}
+.header-movies__language {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 0px 7px;
+    border: white 1px solid;
+    border-radius: 3px;
+    height: 36.6px;
+}
+.header-movies__language p {
+    padding-left: 3px;
+}
+.header-movies__login {
+    background-color:#e50914;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    font-size:19px;
+    padding: 8px 20px;
+    margin: 10px;
+    border-radius: 4px;
+}
+.section-movies {
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+.app-movies {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    justify-content: center;
+    margin: 140px 0;
+    z-index:9;
+}
+.app-movies__title {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:54px;
+    text-align:center;
+}
+.app-movies__subtitle {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:25px;
+    font-weight: 300;
+    margin:20px 0 30px;
+    text-align:center;
+}
+.app-movies__msg {
+    color:white;
+    font-size:18px;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-bottom: 20px;
+    max-width:70%;
+    text-align:center;
+}
+.app-movies-all {
+    display:grid;
+    gap:30px;
+    grid-template-columns: repeat(auto-fit, 14.46%);
+    position: relative;
+    z-index: 9;
+    margin-left: 5%;
+    width: 90%;
+}
+.app-movies-all__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    transition: all .2s ease-in-out;
+}
+.app-movies-all__card:hover {
+    top: -5px;
+}
+.app-movies-all__figure {
+    height: 230px;
+    box-shadow: 0 0px 9px 3px rgb(255,255,255,0.23);
+}
+.app-movies-all__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.app-movies-all__legend {
+    display: flex;
+    flex-direction: column;
+}
+.app-movies-all__year {
+    color:rgba(255,255,255,0.76);
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:13px;
+    background-color:#e50914;
+    max-width:30px;
+    padding: 4px 10px;
+    line-height: 1;
+    margin: 8px 0;
+    border-radius: 2px;
+}
+.app-movies-all__title {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:16px;
+}
+
+.form {
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+.form__input {
+    border: 0;
+    background-color:#fff;
+    border-radius:0;
+    padding:15px 20px;
+    width:35%;
+}
+.form__submit {
+    background-color:#e50914;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    font-size:25px;
+    padding:15px 30px;
+    transition: all .2s ease-in-out;
+}
+.form__submit:hover {
+    background-color:#c70913;
+}
+.movie-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin-top: 10%;
+    transition: opacity 1s; 
+    scroll-margin-top: 90px;
+
+}
+.movie-results.show {
+    opacity: 1;
+    height: auto;
+}
+.movie-results__title {
+    color: #fff;
+    text-align: center;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    z-index: 9;
+
+}
+@media only screen and (max-width: 480px) {
+    .header-movies {
+        flex-direction: column;
+    }
+    
+    .app-movies {
+        margin: 30px 0;
+    }
+    .header-movies__title {
+        text-align: center;
+    }
+    .app-movies__title {
+        font-size:40px;
+        max-width:100%;
+    }
+    .app-movies__subtitle {
+        text-align: center;
+    }
+    .app-movies__msg {
+        text-align: center;
+    }
+    .form {
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .form__input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .form__submit {
+        font-size: 16px;
+    }
+    .app-movies-all {
+        grid-gap:15px;
+        grid-template-columns: repeat(auto-fit, 47%);
+    }
+    .app-movies-all__figure {
+        height: 190px;
+    }
+}
